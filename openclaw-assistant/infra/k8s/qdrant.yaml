@@ -1,0 +1,30 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: ia-assistant-qdrant
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: ia-assistant-qdrant
+  template:
+    metadata:
+      labels:
+        app: ia-assistant-qdrant
+    spec:
+      containers:
+        - name: qdrant
+          image: qdrant/qdrant:latest
+          ports:
+            - containerPort: 6333
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: qdrant
+spec:
+  selector:
+    app: ia-assistant-qdrant
+  ports:
+    - port: 6333
+      targetPort: 6333

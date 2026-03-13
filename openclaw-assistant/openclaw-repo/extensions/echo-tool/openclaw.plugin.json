@@ -1,0 +1,9 @@
+{
+  "name": "echo-tool",
+  "version": "1.0.0",
+  "type": "tool",
+  "description": "Echo input (marketplace demo)",
+  "permissions": ["filesystem.read"],
+  "entry": "index.js"
+}
+

@@ -1,0 +1,9 @@
+{
+  "name": "web-search",
+  "version": "1.0.0",
+  "type": "tool",
+  "description": "Search the internet (demo)",
+  "permissions": ["network.read"],
+  "entry": "index.js"
+}
+

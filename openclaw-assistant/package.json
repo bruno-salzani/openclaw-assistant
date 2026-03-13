@@ -1,0 +1,49 @@
+{
+  "name": "ia-assistant",
+  "version": "1.0.0",
+  "description": "IA Assistant — enterprise-grade AI personal operating system",
+  "type": "module",
+  "main": "dist/main.js",
+  "scripts": {
+    "build": "tsc",
+    "start": "node dist/main.js --serve",
+    "dev": "tsx src/main.ts --serve",
+    "test": "npm run build && node --test dist/tests/**/*.js",
+    "lint": "eslint \"src/**/*.{ts,tsx}\"",
+    "lint:fix": "npm run lint -- --fix",
+    "format": "prettier --write \"src/**/*.{ts,tsx,js,jsx,json,md,yml,yaml}\"",
+    "typecheck": "tsc -p tsconfig.json --noEmit",
+    "evolver": "npm run build && node dist/evolver/cli.js",
+    "evolver:dev": "tsx src/evolver/cli.ts",
+    "eval": "tsx src/eval/cli.ts",
+    "agent-factory": "tsx src/agent-factory/cli.ts",
+    "simulate": "tsx src/simulation/cli.ts"
+  },
+  "dependencies": {
+    "zod": "^3.22.4",
+    "ioredis": "^5.3.2",
+    "pg": "^8.11.3",
+    "@qdrant/js-client-rest": "^1.7.0",
+    "ws": "^8.16.0",
+    "dotenv": "^16.4.1",
+    "prom-client": "^15.1.0",
+    "pngjs": "^7.0.0",
+    "screenshot-desktop": "^1.15.0"
+  },
+  "devDependencies": {
+    "@typescript-eslint/eslint-plugin": "^7.18.0",
+    "@typescript-eslint/parser": "^7.18.0",
+    "typescript": "5.5.4",
+    "@types/node": "^20.11.16",
+    "@types/ws": "^8.5.10",
+    "@types/pg": "^8.11.0",
+    "eslint": "^8.57.1",
+    "eslint-config-airbnb-typescript": "^18.0.0",
+    "eslint-config-prettier": "^9.1.0",
+    "eslint-import-resolver-typescript": "^3.6.1",
+    "eslint-plugin-import": "^2.29.1",
+    "eslint-plugin-unused-imports": "^3.2.0",
+    "prettier": "^3.3.3",
+    "tsx": "^4.7.0"
+  }
+}

@@ -1,0 +1,3 @@
+{"id":"basic-1","prompt":"Explique em uma frase o que é IA Assistant.","assertions":{"regexMustMatch":["IA Assistant"]}}
+{"id":"plan-1","prompt":"Crie um plano para lançar um produto SaaS, com pesquisa e análise.","assertions":{"mustContain":["📋 **Plan Created**:"],"mustContain":["🔍 **Research**:"],"mustContain":["📈 **Analysis**:"]}}
+{"id":"tool-1","prompt":"schedule calendar next week","expect":{"minToolAttempts":1,"minToolSuccess":1},"assertions":{"mustContain":["⚙️ **Execution**:"],"mustContain":["calendar.list"]}}

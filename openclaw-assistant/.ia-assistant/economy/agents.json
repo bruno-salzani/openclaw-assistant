@@ -1,0 +1,48 @@
+{
+  "agents": [
+    {
+      "agent": "planner",
+      "reputation": 1,
+      "credits": 3,
+      "reward": 6,
+      "costUsd": 0,
+      "runs": 6,
+      "ok": 6,
+      "fail": 0,
+      "updatedAt": 1773386591481
+    },
+    {
+      "agent": "research",
+      "reputation": 1,
+      "credits": 3.6000000000000005,
+      "reward": 7.200000000000001,
+      "costUsd": 0.0000016,
+      "runs": 6,
+      "ok": 6,
+      "fail": 0,
+      "updatedAt": 1773386591555
+    },
+    {
+      "agent": "reviewer",
+      "reputation": 1,
+      "credits": 3,
+      "reward": 6,
+      "costUsd": 0,
+      "runs": 6,
+      "ok": 6,
+      "fail": 0,
+      "updatedAt": 1773386591558
+    },
+    {
+      "agent": "coordinator",
+      "reputation": 1,
+      "credits": 3,
+      "reward": 6,
+      "costUsd": 0,
+      "runs": 6,
+      "ok": 6,
+      "fail": 0,
+      "updatedAt": 1773386591561
+    }
+  ]
+}

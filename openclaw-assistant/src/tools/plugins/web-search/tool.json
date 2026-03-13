@@ -1,0 +1,7 @@
+{
+  "name": "web-search",
+  "description": "Search the internet via a simple HTTP-based search API",
+  "permissions": ["browser.read"],
+  "rateLimit": 20,
+  "entry": "index.js"
+}

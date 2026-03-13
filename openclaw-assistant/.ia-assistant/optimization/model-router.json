@@ -1,0 +1,15 @@
+{
+  "enabled": true,
+  "budgetUsdPerRun": 0.0001,
+  "window": 10,
+  "reasoningMinChars": 9000,
+  "longPromptLastMinChars": 850,
+  "lastAdjustmentAt": 1773386621020,
+  "lastDecision": {
+    "avgCostUsd": 0.009999999999999998,
+    "reasoningShare": 1,
+    "action": "increase",
+    "newReasoningMinChars": 9000,
+    "newLongPromptLastMinChars": 850
+  }
+}

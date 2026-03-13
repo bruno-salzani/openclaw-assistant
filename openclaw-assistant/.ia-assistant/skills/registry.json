@@ -1,0 +1,38 @@
+{
+  "skills": [
+    {
+      "id": "pdf-legal-analysis",
+      "name": "PDF Legal Analysis",
+      "tools": ["pdf.read", "web.search", "web.fetch"],
+      "steps": [
+        "Extrair texto do PDF e identificar cláusulas, prazos e obrigações",
+        "Sinalizar riscos (responsabilidade, rescisão, penalidades, confidencialidade)",
+        "Gerar checklist de pontos para revisão/negociação",
+        "Produzir resumo executivo e recomendações"
+      ]
+    },
+    {
+      "id": "financial-risk-analysis",
+      "name": "Financial Risk Analysis",
+      "tools": ["postgres.query", "csv.parse", "web.search"],
+      "steps": [
+        "Coletar dados (receita, despesas, inadimplência, churn, CAC/LTV)",
+        "Calcular métricas e cenários (base, otimista, pessimista)",
+        "Identificar riscos de liquidez, concentração e exposição cambial (se aplicável)",
+        "Gerar recomendações de mitigação e monitoramento"
+      ]
+    },
+    {
+      "id": "market-trend-analysis",
+      "name": "Market Trend Analysis",
+      "tools": ["web.search", "web.fetch", "memory.search"],
+      "steps": [
+        "Pesquisar sinais de mercado (funding, lançamentos, contratações, pricing)",
+        "Comparar concorrentes e mapear diferenciais",
+        "Sintetizar tendências e implicações estratégicas",
+        "Gerar relatório com fontes e próximos passos"
+      ]
+    }
+  ]
+}
+

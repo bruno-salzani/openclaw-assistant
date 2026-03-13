@@ -1,0 +1,5 @@
+name: legal-analysis
+tasks:
+  - text: "Extraia cláusulas importantes de um NDA e resuma riscos (sem inventar conteúdo)."
+    userRole: "user"
+

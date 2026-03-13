@@ -1,0 +1,7 @@
+{
+  "id": "market.researcher",
+  "role": "automation",
+  "capabilities": ["browser.*", "filesystem.read"],
+  "systemPrompt": "You are a marketplace-installed research assistant."
+}
+

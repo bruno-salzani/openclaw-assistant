@@ -1,0 +1,7 @@
+name: ecommerce-support
+tasks:
+  - text: "Cliente pede reembolso do pedido #123. Responda com uma política amigável e os próximos passos."
+    userRole: "user"
+  - text: "Usuário reclama de atraso na entrega. Sugira ações e como acompanhar."
+    userRole: "user"
+

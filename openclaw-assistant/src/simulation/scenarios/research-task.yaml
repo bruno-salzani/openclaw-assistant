@@ -1,0 +1,7 @@
+name: research-task
+tasks:
+  - text: "Pesquise as principais diferenças entre Qdrant e Chroma e resuma em 5 bullets."
+    userRole: "user"
+  - text: "Liste riscos de segurança ao permitir terminal.run em produção."
+    userRole: "user"
+

@@ -1,0 +1,41 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: ia-assistant-gateway
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: ia-assistant-gateway
+  template:
+    metadata:
+      labels:
+        app: ia-assistant-gateway
+    spec:
+      containers:
+        - name: gateway
+          image: ia-assistant/gateway:latest
+          env:
+            - name: OPENCLAW_X_PORT
+              value: "18789"
+            - name: OPENCLAW_X_POSTGRES_URL
+              value: "postgres://openclaw:openclaw@postgres:5432/openclaw"
+            - name: OPENCLAW_X_REDIS_URL
+              value: "redis://redis:6379"
+            - name: OPENCLAW_X_QDRANT_URL
+              value: "http://qdrant:6333"
+            - name: OPENCLAW_X_QDRANT_COLLECTION
+              value: "openclaw_memory"
+          ports:
+            - containerPort: 18789
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: ia-assistant-gateway
+spec:
+  selector:
+    app: ia-assistant-gateway
+  ports:
+    - port: 18789
+      targetPort: 18789

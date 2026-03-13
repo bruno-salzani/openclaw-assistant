@@ -1,4 +1,4 @@
-# IA Assistant: AI Autonomous Operating System
+# OpenClaw Assistant: AI Autonomous Operating System
 
 IA Assistant é um **AI Autonomous Operating System** (AI-OS) local-first, projetado para operar como um organismo de agentes inteligentes capazes de planejar, executar, refletir e aprender continuamente.
 
@@ -185,20 +185,6 @@ flowchart LR
   RER --> CTX[buildRetrievalContext]
   CTX --> PROMPT[Agent Prompt]
   PROMPT --> LLM[LLM Answer]
-```
-
-### Self-Reflection Loop (self-correcting output)
-
-O Core pode rodar um loop de auto-crítica que revisa e reescreve a resposta final quando a qualidade (score) está abaixo do threshold:
-
-- Engine: [improvement-loop.ts](./src/cognition/self-reflection/improvement-loop.ts)
-- Integração: [coordinator-agent.ts](./src/agents/roles/coordinator-agent.ts)
-
-```mermaid
-flowchart TD
-  EX[Executor/Composer] --> CR[Critic]
-  CR -->|PASS| END[END]
-  CR -->|FAIL (rewrite)| EX
 ```
 
 ### Memory Flow (Mermaid)
@@ -1547,6 +1533,3 @@ Arquitetura e autoria profissional: **Bruno Salzani**.
 
 ---
 
-## Docs
-
-- [ia-assistant-vision.md](./docs/ia-assistant-vision.md)

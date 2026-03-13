@@ -107,30 +107,6 @@ flowchart TD
   LE --> END[END]
 ```
 
-### Architecture Diagram (Mermaid)
-
-```mermaid
-flowchart LR
-  UI[UI (Next.js)] -->|/api/chat| GW[CoreGateway (HTTP/WS)]
-  GW --> ORCH[AgentOrchestrator]
-  ORCH --> COORD[CoordinatorAgent]
-  COORD --> PLANNER[PlannerAgent]
-  COORD --> RESEARCH[ResearchAgent]
-  COORD --> EXEC[ExecutorAgent]
-  COORD --> REVIEW[ReviewerAgent]
-
-  COORD --> QUEUE[TaskQueue]
-  QUEUE --> WORKERS[Workers]
-  WORKERS --> TOOLS[ToolExecutionEngine]
-  WORKERS --> MEM[MemorySystem]
-  TOOLS --> SKILLS[Skills/Tools]
-
-  COORD --> GOV[Policy/Governance]
-  GW --> OBS[AI Observability]
-  OBS --> METRICS[Prometheus Metrics]
-  OBS --> TRACES[Traces]
-```
-
 ### Sequence Diagram (Mermaid)
 
 ```mermaid
@@ -171,24 +147,6 @@ flowchart TD
   C --> RV[review]
   C --> F[final]
   RV --> F
-```
-
-### Fluxo Completo (Guardrails → Planner → Router → Execução → Crítica → Aprendizado)
-
-```mermaid
-flowchart TD
-  U[User] --> G[Guardrails]
-  G --> P[Planner]
-  P --> R[Router]
-  R -->|RAG| RS[RAG Subgraph]
-  R -->|Tools| TE[Tool Executor]
-  RS --> S[Synthesizer]
-  TE --> S
-  S --> C[Critic]
-  C -->|PASS| END[END]
-  C -->|FAIL (retry)| P
-  C --> L[Learning]
-  L --> END
 ```
 
 ### Graph State (contrato do “estado” por execução)
